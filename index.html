@@ -151,12 +151,9 @@
     <div class="kiss"></div>
 </div>
 
-<!-- Música de fondo con botón -->
-<audio id="loveSong" loop>
-  <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
-</audio>
-
-<button id="playButton">🎵 Reproducir Música Romántica</button>
+<!-- Música de fondo con enlace -->
+<p>Haz clic en el siguiente enlace para escuchar "November Rain" de Guns N' Roses:</p>
+<a href="https://www.youtube.com/watch?v=8SbUC-UaAxE" target="_blank" id="playButton">🎵 Reproducir Música Romántica</a>
 
 <script>
     // Animación de besos
@@ -179,15 +176,6 @@
         setTimeout(() => heart.remove(), 6000);
     }
     setInterval(createHeart, 500);
-
-    // Reproducir música con clic
-    const playButton = document.getElementById('playButton');
-    const loveSong = document.getElementById('loveSong');
-
-    playButton.addEventListener('click', () => {
-        loveSong.play();
-        playButton.style.display = 'none'; // Oculta el botón después de dar play
-    });
 </script>
 
 </body>
