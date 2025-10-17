@@ -1,129 +1,169 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para Mi Amor 💖</title>
-    <style>
-        /* Fuentes y colores */
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Te Amo Antonio 🐻💖</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        background: linear-gradient(to bottom, #ffe6f0, #ffd6e8);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        overflow: hidden;
+        color: #ff0066;
+    }
 
-        body {
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            background: linear-gradient(to bottom right, #ffe6f0, #ffd6e8);
-            color: #333;
-            text-align: center;
-        }
+    h1 {
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 30px;
+        text-shadow: 2px 2px #ff99c8;
+    }
 
-        header {
-            background-color: #ff99c8;
-            padding: 50px 20px;
-            color: white;
-        }
+    .bear {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        background: #d2a679;
+        border-radius: 50%;
+    }
 
-        header h1 {
-            font-size: 3rem;
-            margin: 0;
-        }
+    .ear {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: #d2a679;
+        border-radius: 50%;
+        top: -25px;
+    }
 
-        header p {
-            font-size: 1.2rem;
-            margin-top: 10px;
-        }
+    .ear.left { left: -15px; }
+    .ear.right { right: -15px; }
 
-        main {
-            padding: 40px 20px;
-            max-width: 800px;
-            margin: auto;
-        }
+    .eye {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: #000;
+        border-radius: 50%;
+        top: 45px;
+    }
 
-        .message {
-            background-color: #fff0f5;
-            padding: 20px;
-            border-radius: 15px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
+    .eye.left { left: 40px; }
+    .eye.right { right: 40px; }
 
-        .heart {
-            color: #ff0066;
-            font-size: 2rem;
-            animation: pulse 1.5s infinite;
-        }
+    .nose {
+        position: absolute;
+        width: 20px;
+        height: 15px;
+        background: #000;
+        border-radius: 50%;
+        top: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.3); }
-            100% { transform: scale(1); }
-        }
+    .mouth {
+        position: absolute;
+        width: 40px;
+        height: 20px;
+        border-bottom: 3px solid #ff0066;
+        border-radius: 0 0 50% 50%;
+        top: 95px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: blowkiss 2s infinite;
+    }
 
-        footer {
-            padding: 30px 20px;
-            background-color: #ff99c8;
-            color: white;
-            font-size: 1rem;
-        }
+    .kiss {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: #ff4da6;
+        border-radius: 50%;
+        top: 90px;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        animation: flykiss 2s infinite;
+    }
 
-        button {
-            background-color: #ff4da6;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 25px;
-            font-size: 1rem;
-            cursor: pointer;
-            margin-top: 20px;
-            transition: 0.3s;
-        }
+    @keyframes flykiss {
+        0% { transform: translateX(-50%) translateY(0) scale(0); opacity: 1; }
+        50% { transform: translateX(-50%) translateY(-50px) scale(1); opacity: 1; }
+        100% { transform: translateX(-50%) translateY(-150px) scale(0); opacity: 0; }
+    }
 
-        button:hover {
-            background-color: #ff1a75;
-        }
-    </style>
+    @keyframes blowkiss {
+        0%,100% { transform: translateX(-50%) rotate(0deg); }
+        50% { transform: translateX(-50%) rotate(-20deg); }
+    }
+
+    /* Corazones flotando */
+    .heart-floating {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        background: #ff4da6;
+        clip-path: polygon(50% 0%, 61% 8%, 68% 18%, 75% 27%, 80% 38%, 83% 50%, 80% 62%, 75% 73%, 68% 82%, 61% 92%, 50% 100%, 39% 92%, 32% 82%, 25% 73%, 20% 62%, 17% 50%, 20% 38%, 25% 27%, 32% 18%, 39% 8%);
+        animation: float 4s linear infinite;
+    }
+
+    @keyframes float {
+        0% { transform: translateY(100vh) scale(0); opacity: 0; }
+        50% { opacity: 1; }
+        100% { transform: translateY(-100px) scale(1); opacity: 0; }
+    }
+
+</style>
 </head>
 <body>
-    <header>
-        <h1>Para Mi Amor 💖</h1>
-        <p>Un espacio lleno de recuerdos y cariño para ti, [nombre de tu novio]</p>
-    </header>
 
-    <main>
-        <div class="message">
-            <p>Mi amor <span class="heart">❤️</span>,</p>
-            <p>Quiero que sepas que te amo con todo mi corazón. Aunque hemos pasado momentos difíciles, nada puede borrar lo que siento por ti. Cada día contigo es un regalo y un motivo para sonreír 💞.</p>
-            <p>Gracias por volver, por quedarte, y por darme otra oportunidad. Siempre te elijo, y siempre te amaré, sin importar nada 💫.</p>
-            <p>Te amo más de lo que las palabras pueden decir ❤️</p>
-        </div>
+<h1>Te amo Antonio 💖</h1>
 
-        <div class="message">
-            <p>Recuerdos de nosotros:</p>
-            <ul>
-                <li>Primer paseo juntos 🌸</li>
-                <li>Tu abrazo que me hace sentir en casa 🤗</li>
-                <li>Las risas hasta que nos dolía la panza 😂</li>
-                <li>Todos los mensajes y notas que nos hemos enviado 💌</li>
-            </ul>
-        </div>
+<div class="bear">
+    <div class="ear left"></div>
+    <div class="ear right"></div>
+    <div class="eye left"></div>
+    <div class="eye right"></div>
+    <div class="nose"></div>
+    <div class="mouth"></div>
+    <div class="kiss"></div>
+</div>
 
-        <button onclick="showSurprise()">Haz clic para una sorpresa 💖</button>
+<!-- Música de fondo opcional -->
+<audio autoplay loop>
+  <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+</audio>
 
-        <div id="surprise" class="message" style="display:none; margin-top:20px;">
-            <p>🎶 “Cada momento contigo es mi canción favorita…” 🎶</p>
-            <p>Te amo, mi vida. Siempre serás mi persona favorita 💞</p>
-        </div>
-    </main>
+<script>
+    // Para que el beso se repita creando un efecto continuo
+    const bear = document.querySelector('.bear');
+    const kiss = document.querySelector('.kiss');
 
-    <footer>
-        Creado con amor por [Tu Nombre] 💖
-    </footer>
+    setInterval(() => {
+        const newKiss = kiss.cloneNode(true);
+        bear.appendChild(newKiss);
+        setTimeout(() => newKiss.remove(), 2000);
+    }, 1000);
 
-    <script>
-        function showSurprise() {
-            document.getElementById('surprise').style.display = 'block';
-        }
-    </script>
+    // Crear corazones flotando
+    function createHeart() {
+        const heart = document.createElement('div');
+        heart.className = 'heart-floating';
+        heart.style.left = Math.random() * window.innerWidth + 'px';
+        heart.style.animationDuration = 3 + Math.random() * 3 + 's';
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 6000);
+    }
+
+    setInterval(createHeart, 500);
+</script>
+
 </body>
 </html>
