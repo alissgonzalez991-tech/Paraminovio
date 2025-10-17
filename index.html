@@ -1,59 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Te Amo Antonio 🐻💖</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #ffe6f0, #ffd6e8);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            color: #ff0066;
-            text-align: center;
-            overflow: hidden;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Te Amo Antonio 🐻💖</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #ffe6f0, #ffd6e8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #ff0066;
+    text-align: center;
+    overflow: hidden;
+}
 
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px #ff99c8;
-        }
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px #ff99c8;
+}
 
-        #playButton {
-            background-color: #ff4da6;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 25px;
-            font-size: 1rem;
-            cursor: pointer;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-            margin-bottom: 20px;
-        }
+#playButton {
+    background-color: #ff4da6;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+}
 
-        /* Osito */
-        .bear { position: relative; width: 150px; height: 150px; background: #d2a679; border-radius: 50%; margin-top: 20px; }
-        .ear { position: absolute; width: 50px; height: 50px; background: #d2a679; border-radius: 50%; top: -25px; }
-        .ear.left { left: -15px; } .ear.right { right: -15px; }
-        .eye { position: absolute; width: 20px; height: 20px; background: #000; border-radius: 50%; top: 45px; }
-        .eye.left { left: 40px; } .eye.right { right: 40px; }
-        .nose { position: absolute; width: 20px; height: 15px; background: #000; border-radius: 50%; top: 80px; left: 50%; transform: translateX(-50%); }
-        .mouth { position: absolute; width: 40px; height: 20px; border-bottom: 3px solid #ff0066; border-radius: 0 0 50% 50%; top: 95px; left: 50%; transform: translateX(-50%); animation: blowkiss 2s infinite; }
-        .kiss { position: absolute; width: 20px; height: 20px; background: #ff4da6; border-radius: 50%; top: 90px; left: 50%; transform: translateX(-50%); opacity: 0; animation: flykiss 2s infinite; }
+/* Osito */
+.bear { position: relative; width: 150px; height: 150px; background: #d2a679; border-radius: 50%; margin-top: 20px; }
+.ear { position: absolute; width: 50px; height: 50px; background: #d2a679; border-radius: 50%; top: -25px; }
+.ear.left { left: -15px; } .ear.right { right: -15px; }
+.eye { position: absolute; width: 20px; height: 20px; background: #000; border-radius: 50%; top: 45px; }
+.eye.left { left: 40px; } .eye.right { right: 40px; }
+.nose { position: absolute; width: 20px; height: 15px; background: #000; border-radius: 50%; top: 80px; left: 50%; transform: translateX(-50%); }
+.mouth { position: absolute; width: 40px; height: 20px; border-bottom: 3px solid #ff0066; border-radius: 0 0 50% 50%; top: 95px; left: 50%; transform: translateX(-50%); animation: blowkiss 2s infinite; }
+.kiss { position: absolute; width: 20px; height: 20px; background: #ff4da6; border-radius: 50%; top: 90px; left: 50%; transform: translateX(-50%); opacity: 0; animation: flykiss 2s infinite; }
 
-        @keyframes flykiss { 0% { transform: translateX(-50%) translateY(0) scale(0); opacity: 1; } 50% { transform: translateX(-50%) translateY(-50px) scale(1); opacity: 1; } 100% { transform: translateX(-50%) translateY(-150px) scale(0); opacity: 0; } }
-        @keyframes blowkiss { 0%,100% { transform: translateX(-50%) rotate(0deg); } 50% { transform: translateX(-50%) rotate(-20deg); } }
+@keyframes flykiss { 0% { transform: translateX(-50%) translateY(0) scale(0); opacity: 1; } 50% { transform: translateX(-50%) translateY(-50px) scale(1); opacity: 1; } 100% { transform: translateX(-50%) translateY(-150px) scale(0); opacity: 0; } }
+@keyframes blowkiss { 0%,100% { transform: translateX(-50%) rotate(0deg); } 50% { transform: translateX(-50%) rotate(-20deg); } }
 
-        /* Corazones flotando */
-        .heart-floating { position: absolute; width: 25px; height: 25px; background: #ff4da6; clip-path: polygon(50% 0%,61% 8%,68% 18%,75% 27%,80% 38%,83% 50%,80% 62%,75% 73%,68% 82%,61% 92%,50% 100%,39% 92%,32% 82%,25% 73%,20% 62%,17% 50%,20% 38%,25% 27%,32% 18%,39% 8%); animation: float 4s linear infinite; }
-        @keyframes float { 0% { transform: translateY(100vh) scale(0); opacity:0; } 50% { opacity:1; } 100% { transform: translateY(-100px) scale(1); opacity:0; } }
-    </style>
+/* Corazones flotando */
+.heart-floating { position: absolute; width: 25px; height: 25px; background: #ff4da6; clip-path: polygon(50% 0%,61% 8%,68% 18%,75% 27%,80% 38%,83% 50%,80% 62%,75% 73%,68% 82%,61% 92%,50% 100%,39% 92%,32% 82%,25% 73%,20% 62%,17% 50%,20% 38%,25% 27%,32% 18%,39% 8%); animation: float 4s linear infinite; }
+@keyframes float { 0% { transform: translateY(100vh) scale(0); opacity:0; } 50% { opacity:1; } 100% { transform: translateY(-100px) scale(1); opacity:0; } }
+
+#musicPlayer { width: 300px; max-width: 90%; margin-top: 20px; }
+</style>
 </head>
 <body>
 
@@ -70,20 +72,21 @@
     <div class="kiss"></div>
 </div>
 
-<audio id="audioPlayer" loop>
-    <source src="https://s-por-amarte-asi.mp3.pm/por-amarte-asi.mp3" type="audio/mpeg">
-    Tu navegador no soporta audio.
-</audio>
+<!-- Embed de Audiomack -->
+<div id="musicPlayer" style="display:none;">
+  <iframe src="https://audiomack.com/embed/karaokeinstrumental/song/por-amarte-asi-instrumental-version" 
+          scrolling="no" width="100%" height="152" frameborder="0" title="Por Amarte Así (Instrumental Version)"></iframe>
+</div>
 
 <script>
 const playButton = document.getElementById('playButton');
-const audioPlayer = document.getElementById('audioPlayer');
+const musicPlayer = document.getElementById('musicPlayer');
 const bear = document.querySelector('.bear');
 const kiss = document.querySelector('.kiss');
 
 playButton.addEventListener('click', () => {
-    audioPlayer.play();
-    playButton.style.display = 'none';
+    musicPlayer.style.display = 'block'; // muestra el iframe
+    playButton.style.display = 'none'; // oculta el botón
 });
 
 // Animación besos
